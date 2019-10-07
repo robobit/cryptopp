@@ -805,7 +805,7 @@ aes_armv4.o : aes_armv4.S
 	$(CXX) $(strip $(CXXFLAGS) -fpermissive $(CRYPTOGAMS_AES_FLAG) -c) $<
 
 cpu-features.o: cpu-features.h cpu-features.c
-	$(CXX) $(strip $(CXXFLAGS) -fpermissive -c) cpu-features.c
+	$(CC) $(strip $(CXXFLAGS) -fpermissive -c) cpu-features.c
 
 # SSSE3 or NEON available
 aria_simd.o : aria_simd.cpp
